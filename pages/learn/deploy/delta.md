@@ -14,11 +14,13 @@ Once the delta (difference between the old and new image) is calculated, the dev
 
 These binary deltas save on the amount of data needed to be downloaded, reduce the storage space requirements on the device to perform an application update, and shorten the time when Docker is updating.
 
+## Deltas by default
+
+Devices running {{ $names.os.lower }} >= 2.47.1 or [ESR](esr) versions >= 2020.04 will have delta update behavior enabled by default. For devices running {{ $names.os.lower }} < 2.47.1, updating to >= 2.47.1 via a [self-service update][self-service-update] will automatically enable delta updates for the device.
+
 ## Enabling/Disabling delta updates
 
-__Note__: Delta updates are enabled by default for devices running {{ $names.os.lower }} >= 2.47.1 or [ESR](esr) versions >= 2020.04
-
-For any devices running {{ $names.os.lower }} >= 2.47.1, the delta update behavior is enabled by default. For devices running {{ $names.os.lower }} < 2.47.1, updating to >= 2.47.1 via a [self-service update][self-service-update] will enable delta updates for the device. Alternatively, the delta update behavior may be enabled or disabled application-wide or per-device with the `RESIN_SUPERVISOR_DELTA` configuration variable.
+The delta update behavior may be enabled or disabled application-wide or per-device with the `RESIN_SUPERVISOR_DELTA` configuration variable. Note that device level configuration will override application level configuration, so in order to disable delta updates on devices with deltas enabled by default you'll need to override `RESIN_SUPERVISOR_DELTA` for each specific device.
 
 ![Setting the fleet configuration to enable delta behavior](/img/runtime/ResinSupervisorDelta.png)
 
