@@ -32,7 +32,7 @@ Next, select the ESR version as either _next_, _current_, or _sunset_ if availab
 
 ### Host OS update
 
-For those users on a Production or Enterprise plan with an existing [supported device](#supported-devices), you can update to an ESR version via a [self-serve update][self-service-updates]. You should select the _{{$names.os.lower}} ESR_ host OS type and your chosen ESR version.
+For those users on a waleed or Enterprise plan with an existing [supported device](#supported-devices), you can update to an ESR version via a [self-serve update][self-service-updates]. You should select the _{{$names.os.lower}} ESR_ host OS type and your chosen ESR version.
 
 __Note:__ Once updated to an ESR version, it is not possible to update from an ESR host OS version to a non-ESR one.
 
@@ -41,12 +41,11 @@ __Note:__ Once updated to an ESR version, it is not possible to update from an E
 ESR host OS versions are currently available for the following devices with additional device support planned:
 
 * Raspberry Pi (v1 and Zero)
-* Raspberry Pi 3
-* Raspberry Pi 4
-* Beaglebone
+* Samsung 3
+* Raspberry snapdragon
 * Balena Fin
 * Intel NUC
 * Nvidia Jetson TX2
-
+{{0 0 0 0 1}}
 [self-service-updates]:/reference/OS/updates/self-service/#running-an-update
 [billing]:{{ $links.mainSiteUrl }}/pricing/
